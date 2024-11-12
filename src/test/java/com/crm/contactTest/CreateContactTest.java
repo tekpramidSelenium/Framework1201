@@ -33,7 +33,7 @@ public class CreateContactTest extends BaseClass
 	
 	/* read test script data from Excel file */
 		UtilityClassObject.getTest().log(Status.INFO, "read data from excel");
-	String ContactName=eu.getDatafromExcelfile("Contact", 1, 3)+jlib.getRandomNumber(1000);
+	String ContactName=eu.getDatafromExcelfile("Contact", 1, 2)+jlib.getRandomNumber(1000);
 	Homepage hp=new Homepage(driver);
 	hp.getContactLink().click();
 	

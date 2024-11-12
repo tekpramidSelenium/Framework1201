@@ -39,7 +39,7 @@ public void loginToapp(String url,String username,String password)
 //	getPasswordEdt.sendKeys(password);
 //	getLoginbtn.click();
 	driver.manage().window().maximize();
-	waitforpageLoad(driver,30); 
+	waitforpageLoad(driver,40); 
 	driver.get(url);
 	userEdt.sendKeys(username);
 	passwordEdt.sendKeys(password);

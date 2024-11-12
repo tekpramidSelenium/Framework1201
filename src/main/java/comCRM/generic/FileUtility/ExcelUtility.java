@@ -11,7 +11,7 @@ public class ExcelUtility {
 	
 public String getDatafromExcelfile(String sheetname,int row,int cell) throws Throwable
 {
-	FileInputStream fis=new FileInputStream("./src/test/resources/Practice.xlsx");
+	FileInputStream fis=new FileInputStream("./testData/Practice.xlsx");
 	Workbook wb=WorkbookFactory.create(fis);
 	String data=wb.getSheet(sheetname).getRow(row).getCell(cell).getStringCellValue();
 	wb.close(); 
@@ -20,7 +20,7 @@ public String getDatafromExcelfile(String sheetname,int row,int cell) throws Thr
 }
 public int getRowcount(String sheetname) throws Throwable
 {
-	FileInputStream fis=new FileInputStream("./src/test/resources/Practice.xlsx");
+	FileInputStream fis=new FileInputStream("./testData/Practice.xlsx");
 	Workbook wb=WorkbookFactory.create(fis);
 	int rowcount=wb.getSheet(sheetname).getLastRowNum();
 	wb.close();
@@ -28,7 +28,7 @@ public int getRowcount(String sheetname) throws Throwable
 }
 public void setDataintoExcelfile(String sheetname,int row,int cell,String data) throws Throwable
 {
-	FileInputStream fis=new FileInputStream("./src/test/resources/Practice.xlsx");
+	FileInputStream fis=new FileInputStream("./testData/Practice.xlsx");
 	Workbook wb=WorkbookFactory.create(fis);
 	wb.getSheet(sheetname).getRow(row).createCell(cell,CellType.STRING).setCellValue(data);
 	FileOutputStream fo=new FileOutputStream("./src/test/resources/Practice.xlsx");
