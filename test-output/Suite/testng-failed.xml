@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="comCRM.listenerUtility.ListImpclass"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="Test-2(failed)">
+    <parameter name="Browser" value="chromee"/>
+    <classes>
+      <class name="com.crm.productTest.CreateProductTest">
+        <methods>
+          <include name="createProductTest"/>
+          <include name="beforsuite"/>
+          <include name="bm"/>
+          <include name="ceateProductWithVendorNametest"/>
+          <include name="afterSuite"/>
+          <include name="createProductWithCategoryTest"/>
+          <include name="am"/>
+          <include name="ac"/>
+          <include name="bc"/>
+        </methods>
+      </class> <!-- com.crm.productTest.CreateProductTest -->
+      <class name="com.crm.contactTest.CreateContactTest">
+        <methods>
+          <include name="beforsuite"/>
+          <include name="bm"/>
+          <include name="createContactWithOrgTest"/>
+          <include name="createContactWithSupportDateTest"/>
+          <include name="afterSuite"/>
+          <include name="createContactTest"/>
+          <include name="am"/>
+          <include name="ac"/>
+          <include name="bc"/>
+        </methods>
+      </class> <!-- com.crm.contactTest.CreateContactTest -->
+      <class name="com.crm.vendorTest.CreateVendorTest">
+        <methods>
+          <include name="beforsuite"/>
+          <include name="bm"/>
+          <include name="createVendorTest"/>
+          <include name="afterSuite"/>
+          <include name="am"/>
+          <include name="ac"/>
+          <include name="bc"/>
+        </methods>
+      </class> <!-- com.crm.vendorTest.CreateVendorTest -->
+      <class name="com.crm.organizationTest.CreateORGTest">
+        <methods>
+          <include name="beforsuite"/>
+          <include name="bm"/>
+          <include name="createOrgWithPhoneNoTest"/>
+          <include name="createOrgWithIndstryTest"/>
+          <include name="afterSuite"/>
+          <include name="am"/>
+          <include name="createOrgTest"/>
+          <include name="ac"/>
+          <include name="bc"/>
+        </methods>
+      </class> <!-- com.crm.organizationTest.CreateORGTest -->
+      <class name="com.crm.leadsTest.CreateLeadsTest">
+        <methods>
+          <include name="createLeadsNameTest"/>
+          <include name="beforsuite"/>
+          <include name="bm"/>
+          <include name="afterSuite"/>
+          <include name="createLeadWithIndustryTest"/>
+          <include name="am"/>
+          <include name="ac"/>
+          <include name="createLeadsWithPhoneNoTest"/>
+          <include name="bc"/>
+        </methods>
+      </class> <!-- com.crm.leadsTest.CreateLeadsTest -->
+    </classes>
+  </test> <!-- Test-2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
