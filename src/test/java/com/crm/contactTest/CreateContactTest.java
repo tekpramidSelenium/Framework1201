@@ -69,7 +69,7 @@ public class CreateContactTest extends BaseClass
 		 /* read testscript data from Excel file */
 		String ContactName=eu.getDatafromExcelfile("Contact", 1, 2)+jlib.getRandomNumber(1000);
 				
-		
+		System.out.println(ContactName);
 		 /* navigate to Contact module  */
 		Homepage hp=new Homepage(driver);
 		hp.getContactLink().click();

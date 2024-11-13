@@ -26,7 +26,7 @@ public class CreateORGTest extends BaseClass {
 	{
 		// read test script data from Excel file
 		UtilityClassObject.getTest().log(Status.INFO, "read data from excel");	
-		String OrgName=eu.getDatafromExcelfile("Org", 1, 2)+jlib.getRandomNumber(1000);
+		String OrgName=eu.getDatafromExcelfile("Org", 1, 2)+jlib.getRandomNumber(2000);
 		
 		// navigate to organization module
 		UtilityClassObject.getTest().log(Status.INFO, "navigate to organization");
@@ -46,7 +46,7 @@ public class CreateORGTest extends BaseClass {
 		// verify header msg and OrgName
 		OrganizationInfopage oip=new OrganizationInfopage(driver);
 		String header=oip.getHeaderMsg().getText();
-		boolean status=header.contains(OrgName);
+		boolean status=header.trim().contains(OrgName);
 		Assert.assertEquals(status, true);
 		//jlib.verifyInfo( header,OrgName);
 		String actOrgName=oip.getOrgNameInfo().getText();

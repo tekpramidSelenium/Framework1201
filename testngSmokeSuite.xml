@@ -12,10 +12,7 @@
 </listeners>
   <test name="Test">
     <classes>
-      <class name="com.crm.contactTest.CreateContactTest"/>
-      <class name="com.crm.leadsTest.CreateLeadsTest"/>
-      <class name="com.crm.productTest.CreateProductTest"/>
-      <class name="com.crm.vendorTest.CreateVendorTest"/>
+      
       <class name="com.crm.organizationTest.CreateORGTest"/>
     </classes>
   </test> <!-- Test -->

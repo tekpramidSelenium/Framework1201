@@ -49,29 +49,31 @@ public void afterSuite() throws SQLException
 }
 
 
-/*
- * @BeforeClass(groups= {"smokeTest","regressionTest"}) public void bc( ) throws
- * Throwable { //String browser=fu.getDatafromPropertyfile("Browser"); String
- * browser=System.getProperty("browser",fu.getDatafromPropertyfile("Browser"));
- * driver=wlib.launchingBrowser(browser);
- * System.out.println("launching the browser");
- * 
- * sdriver=driver; UtilityClassObject.setDriver(driver); }
- */
- 
-
-@Parameters("Browser")
 @BeforeClass(groups= {"smokeTest","regressionTest"})
-public void bc(@Optional("chrome")String browser ) throws Throwable
+public void bc() throws Throwable
+{
+	//String BROWSER=fu.getDatafromPropertyfile("Browser");
+	String BROWSER=System.getProperty("browser",fu.getDatafromPropertyfile("Browser"));
+	driver=wlib.launchingBrowser(BROWSER);
+	System.out.println("launching the browser");
+
+	sdriver=driver;
+	UtilityClassObject.setDriver(driver);
+	driver=UtilityClassObject.getDriver();
+}
+
+/*@Parameters("Browser")
+@BeforeClass(groups= {"smokeTest","regressionTest"})
+public void bc(@Optional("chrome")String Browser ) throws Throwable
 {
 	//String browser=fu.getDatafromPropertyfile("Browser");
-	//String browser=System.getProperty(Browser,fu.getDatafromPropertyfile("Browser"));
+	String browser=System.getProperty(Browser,fu.getDatafromPropertyfile("Browser"));
 	driver=wlib.launchingBrowser(browser);
 	System.out.println("launching the browser");
 
 	sdriver=driver;
 	UtilityClassObject.setDriver(driver);
-}
+}*/
 
 @AfterClass(groups= {"smokeTest","regressionTest"})
 public void ac()
